@@ -13,9 +13,6 @@ $dataPoints = array(
 );
  
 ?>
-<!DOCTYPE HTML>
-<html>
-<head>
 <script>
 window.onload = function() {
  
@@ -38,10 +35,6 @@ chart.render();
  
 }
 </script>
-</head>
-<body>
 <div id="chartContainer"></div>
 <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
-</body>
-</html>
 <?=template_footer()?>

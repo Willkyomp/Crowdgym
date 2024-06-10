@@ -25,23 +25,59 @@ function template_header($title)
 	<body>
 	<header>
 	<nav class="navtop">
+	<ul>
     	<div>
-			      <h1><a href="index.php"><h1>Crowd Gym</h1></a></h1>          	
-    				<a href="read.php"><i class="fas fa-address-book"></i>Cadastro de Alunos</a>
-    	</div>
-    </nav>
-	<div class = 'menu'>
-	<a class='link' href="./chartcolumn.php">Fluxo Anual</a>
+	<li class="dropdown">
+	<a href="">Fluxos</a>
+	<div class="dropdown-menu">		
+    <a class='link' href="./chartcolumnweek.php">Fluxo Semanal</a>
 	<a class='link' href="./chartcolumnmonth.php">Fluxo Mensal</a>
+	<a class='link' href="./chartcolumn.php">Fluxo Anual</a>
 	<a class='link' href="./chartpizza.php">Faixa Etária</a>
-	</div>
+    </div>
+	</li>     	
+	<li>
+    				<a class="cadastro" href="read.php"><i class="fas fa-address-book"></i>Cadastro de Alunos</a>
+	</li>
+	<li>
+					<a class="principal" href="index.php"><h1>Crowd Gym</h1></a>   
+	</li>
+    	</div>
+		</ul>
+    </nav>
+
 	</header>
 EOT;
 }
 function template_footer()
 {
 	echo <<<EOT
+	<footer>
+	<div class="main">
+		<div class="content footer-links">
+			<div class="footer-company">
+				<h4>Easy Systems</h4>
+				<h6>Sobre</h6>
+				<h6>Contato</h6>
+			</div>
+			<div class="footer-social">
+				<h4>Redes Sociais</h4>
+				<div class="social-icons">
+					<a class='link' href="https://www.instagram.com/easysystemltda/?theme=dark" target="_blank" ><img src="imagens/instagram.png" alt="instagram"></a>
+				</div>
+			</div>
+			<div class="footer-contact">
+				<h4>Nosso Contato</h4>
+				<h6> +55 11 988776655</h6>
+				<h6>contato@easysystems.com.br</h6>
+				<h6>Barueri SP</h6>
+			</div>
+		</div>
+	</div>
+	<div class="last">EASY SYSTEMS LTDA</div>
+</footer>
     </body>
+	
 </html>
 EOT;
 }

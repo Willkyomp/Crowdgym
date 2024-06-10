@@ -20,12 +20,8 @@ $dataPoints = array(
 	array("y" => 950, "label" => "dezembro"),
 
 );
-
 ?>
-<!DOCTYPE HTML>
-<html>
 
-<head>
 	<script>
 		window.onload = function() {
 
@@ -47,13 +43,7 @@ $dataPoints = array(
 			chart.render();
 
 		}
-	</script>
-</head>
-
-<body>
-	<div id="chartContainer"></div>
+	</script>	<div id="chartContainer"></div>
 	<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
-</body>
 
-</html>
 <?= template_footer() ?>

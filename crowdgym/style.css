@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen,
-    ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial,
-    sans-serif;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --black: #000000;
+  --gray: #5e6875;
+  --white: #ededed;
 }
 
 body {
@@ -13,49 +19,41 @@ body {
   margin: 0;
 }
 
-.navtop {
-  background-color: #000000;
-  height: 100%;
-  width: 100%;
-  border: 0;
+nav {
+  background-color: #000;
 }
 
-.navtop div {
-  display: flex;
-  margin: 0 auto;
-  width: 80%;
-  height: 100%;
+nav li {
+  display: inline;
+  text-align: center;
 }
 
-.navtop div h1,
-.navtop div a {
-  display: inline-flex;
-  align-items: center;
-}
-
-.navtop div h1 {
-  flex: 1;
-  font-size: 24px;
-  padding: 0 20px;
-  margin: 0;
-  color: #ecf0f6;
-  font-weight: bold;
-}
-
-.navtop div a {
-  padding: 0 20px;
+nav li a {
+  display: inline-block;
+  color: white;
   text-decoration: none;
-  text-align: right;
-  color: #d3dbe7;
-  font-weight: bold;
+  padding: 15px;
+  padding-right: 20%;
 }
 
-.navtop div a i {
-  padding: 2px 8px 0 0;
+nav li a:hover {
+  background-color: rgb(71, 83, 150);
+  color: #cccccc;
 }
 
-.navtop div a:hover {
-  color: #ecf0f6;
+.dropdown-menu {
+  position: absolute;
+  box-shadow: 0 0 2px black;
+  display: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .content b {
@@ -65,7 +63,7 @@ body {
   display: inline-block;
   font-family: arial;
   border-radius: 4px;
-  padding: 10px;
+  text-align: center;
 }
 
 .content b {
@@ -76,18 +74,16 @@ body {
 }
 
 .content {
-  width: 1000px;
+  width: 80%;
   margin: 0 auto;
   margin-left: 20%;
 }
 
 .content h2 {
-  margin-left: 20;
   font-size: 22px;
   border-bottom: 1px solid #ebebeb;
   color: #000000;
 }
-
 .read .create-contact {
   display: inline-block;
   text-decoration: none;
@@ -97,6 +93,7 @@ body {
   color: #ffffff;
   padding: 10px 15px;
   margin: 15px 0;
+  margin-left: 20px;
 }
 
 .read .create-contact:hover {
@@ -106,12 +103,13 @@ body {
 .read .pagination {
   display: flex;
   justify-content: flex-end;
+
 }
 
 .read .pagination a {
-  display: inline-block;
+  display: block;
   text-decoration: none;
-  background-color: #a5a7a9;
+  background-color: #3b7ab8;
   font-weight: bold;
   color: #ffffff;
   padding: 5px 10px;
@@ -121,17 +119,16 @@ body {
 .read .pagination a:hover {
   background-color: #999b9d;
 }
-
 .read table {
-  width: 100%;
-  padding-top: 30px;
-  border-collapse: collapse;
+  border-collapse: separate;
+  height: 343px;
 }
 
 .read table thead {
   background-color: #ebeef1;
   border-bottom: 1px solid #d3dae0;
 }
+
 
 .read table thead td {
   padding: 10px;
@@ -199,9 +196,7 @@ body {
 }
 
 .update form {
-  padding: 15px 0;
-  display: flex;
-  flex-flow: wrap;
+  height: 450px;
 }
 
 .update form label {
@@ -234,12 +229,15 @@ body {
 .update form input[type="submit"]:hover {
   background-color: #000000;
 }
-
-.delete .yesno {
-  display: flex;
+.content-delete{
+  height: 400px;
+}
+.content-delete .yesno {
+  display: block;
+  height: 421px;
 }
 
-.delete .yesno a {
+.content-delete .yesno a {
   display: inline-block;
   text-decoration: none;
   background-color: #464749;
@@ -249,39 +247,68 @@ body {
   margin: 15px 10px 15px 0;
 }
 
-.delete .yesno a:hover {
+
+.content-delete .yesno a:hover {
   background-color: #ff0000;
 }
 
-.link {
-  width: 10em;
-  text-decoration: none;
-  background-color: #000;
-  color: #fff;
-  font-weight: 400;
-  display: inline-block;
-  font-family: arial;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 5px;
-  margin-top: 10px;
-}
 
 #chartContainer {
-  height: 370px;
   width: 70%;
   margin-left: 20%;
-  padding: 5%;
+  padding-bottom: 35%;
+  height: 150px;
 }
 
-.menu {
-  background-color: #464749;
-  display: flex;
-  width: 20%;
-  height: 100%;
-  position: absolute;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px;
+footer {
+  width: 100%;
+}
 
+footer .main {
+  width: 100%;
+  height: 20%;
+  background: var(--black);
+  padding: 20px 10px;
+}
+
+.footer-links {
+  max-width: 1000px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.footer-company,
+.footer-rental,
+.footer-contact,
+.footer-social {
+  color: white;
+  height: 100%;
+  min-height: 100px;
+  align-items: center;
+}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  margin-bottom: 8px;
+}
+
+.main .footer-social img {
+  width: 32px;
+  height: 32px;
+}
+
+footer .last {
+  width: 100%;
+  height: 30%;
+  background: var(--gray);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

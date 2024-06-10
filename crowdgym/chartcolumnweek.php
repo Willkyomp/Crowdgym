@@ -1,4 +1,9 @@
 <?php
+include 'functions.php';
+?>
+
+<?=template_header('CrowdGym')?>
+<?php
 $dataPoints = array(
   array("y" => 33, "label" => "domingo"),
   array("y" => 24, "label" => "segunda-feira"),
@@ -9,10 +14,6 @@ $dataPoints = array(
 );
 
 ?>
-<!DOCTYPE HTML>
-<html>
-
-<head>
   <script>
     window.onload = function() {
 
@@ -35,11 +36,6 @@ $dataPoints = array(
 
     }
   </script>
-</head>
-
-<body>
   <div id="chartContainer"></div>
   <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
-</body>
-
-</html>
+<?=template_footer()?>
